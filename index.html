@@ -15,6 +15,7 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const color_box = document.getElementById("color_box");
@@ -27,6 +28,11 @@
             const blue_button = document.getElementById("blue_button");
             blue_button.onclick = function () {
                 color_box.className = "blue";
+            };
+
+            const pink_button = document.getElementById("pink_button");
+            pink_button.onclick = function() {
+                color_box.className = "pink";
             };
 
             /* TODO 1
@@ -43,18 +49,25 @@
         has been clicked <span id="countspan">0</span> times.
         <script>
             let count = 0;
+            
             const countspan = document.getElementById("countspan");
             
             const counter_button = document.getElementById("counter_button");
-            counter_button.onclick = function() {
-                /* TODO 2
-                 *
-                 * Fill in this function so that it increments
-                 * (adds one to) the variable named count,
-                 * then updates the text content of "countspan"
-                 * to show the current value of "count".
-                 */
+            counter_button.onclick = function () { 
+                 count = count + 1
+                 countspan.innerHTML = count
+                 console.log(count)
             }
+    
+
+
+                
+        </script>
+
+<hr>
+            
+            
+            
         </script>
 
         <hr>
@@ -64,6 +77,10 @@
         <script>
             const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
+                if (count %2 == 0) {alert ("even")}
+
+                else {alert("odd")}
+
                 /* TODO 3
                  *
                  * Fill in this function so that it shows an
